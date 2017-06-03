@@ -4,10 +4,14 @@
 // add video as part of video list entry 
 // set video for video list entry as item from videos array
 
-var VideoList = ({videos}) => (
+var VideoList = ({ videos, playVideo }) => (
   <div className="video-list media">
     {videos.map((video, i) =>
-      <VideoListEntry key={i} video={video}/>
+      <VideoListEntry
+        key={i}
+        video={video}
+        playVideo={playVideo}
+      />
     )}
   </div>
 );

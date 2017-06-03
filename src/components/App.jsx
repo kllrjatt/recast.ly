@@ -27,12 +27,16 @@ class App extends React.Component {
       <div>
         <Nav />
         <div className="col-md-7">
-        {/*pass in current video to video player to assign the play sequence */}
+          {/*pass in current video to video player to assign the play sequence */}
           <VideoPlayer video={this.state.currentVideo} />
         </div>
         <div className="col-md-5">
-        {/* pass videos from the current state into the list to help create a video list */}
-          <VideoList videos={this.state.videos} />
+          {/* pass videos from the current state into the list to help create a video list
+          Pass play video to bind the event handler into the function as well
+         */}
+          <VideoList
+            playVideo={this.playVideo.bind(this)}
+            videos={this.state.videos} />
         </div>
       </div>
     );
