@@ -15,7 +15,7 @@ window.exampleVideoData = [{
     description: 'My website - https://www.thenewboston.com/videos.php Have questions about the tutorial or React? Ask them here ...',
     thumbnails: {
       default: {
-        url: 'https://i.ytimg.com/vi/4ZAEBxGipoA/default.jpg',
+        url: 'https://i.ytimg.com/vi/4ZAEBxGipoA/default.jpg', 
         width: 120,
         height: 90
       },
