@@ -7,9 +7,9 @@ class App extends React.Component {
     // add state 
     this.state = {
       // add video - video will store a list of videos 
-      video: [],
+      videos: window.exampleVideoData,
       // add current video -- current video will be the video playing in the player 
-      currentVideo: null
+      currentVideo: window.exampleVideoData[0]
     };
   }
   // add a play video method
@@ -23,15 +23,16 @@ class App extends React.Component {
 
   // add render method to app. 
   render() {
-    console.log(this.props);
     return (
       <div>
         <Nav />
         <div className="col-md-7">
-          <VideoPlayer video={window.exampleVideoData[0]} />
+        {/*pass in current video to video player to assign the play sequence */}
+          <VideoPlayer video={this.state.currentVideo} />
         </div>
         <div className="col-md-5">
-          <VideoList videos={window.exampleVideoData} />
+        {/* pass videos from the current state into the list to help create a video list */}
+          <VideoList videos={this.state.videos} />
         </div>
       </div>
     );
