@@ -1,14 +1,14 @@
-var VideoList = () => (
+
+// pass videos to video list 
+// map over videos array 
+// add video as part of video list entry 
+// set video for video list entry as item from videos array
+
+var VideoList = ({videos}) => (
   <div className="video-list media">
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
+    {videos.map((video, i) =>
+      <VideoListEntry key={i} video={video}/>
+    )}
   </div>
 );
 
